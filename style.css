@@ -1,0 +1,353 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/*Menu de Navegación*/
+
+.navename a img {
+    width: 140px;
+}
+
+.navMenu ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.aNav:hover {
+    color: #BBB9AF;
+}
+
+.icons {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+
+.icons a {
+    color: black;
+    font-weight: bold;
+}
+
+.nav-item a {
+    font-weight: bold;
+    color: black;
+}
+
+
+
+/*HERO*/
+
+.hero {
+    background-image: url(./Images/fondoHero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+
+.hero h1 {
+    color: white;
+    width: 25%;
+    line-height: 1.2;
+    font-size: 40px;
+}
+
+.hero button {
+    font-size: 12px;
+    width: 110px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    margin-top: 15px;
+}
+
+
+/*ABOUT*/
+
+.aboutItems {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+
+
+.aboutText {
+    display: flex;
+    margin-top: 60px;
+    text-align: center;
+    width: 46%;
+    height: auto;
+
+}
+
+.aboutButton button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    color: blue;
+}
+
+
+
+/*Galeria*/
+
+.galeria {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.galeriaText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.card {
+    border: none;
+}
+
+.card-text {
+    margin: 0;
+}
+
+.text-body-black {
+    font-weight: bold;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+
+
+/*Formulario */
+
+.formulario {
+    background-color: #BBB9AF;
+    padding: 35px 0;
+}
+
+.form-container {
+    max-width: 700px;
+}
+
+.questionForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.questionForm p {
+    line-height: 40px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.form-container hr {
+    width: 15%;
+    height: 3px;
+    background-color: #000000;
+    opacity: 100%;
+    border: none;
+    margin: 0 auto;
+}
+
+
+.form-control {
+    margin: 0 auto;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    border-radius: 15px;
+}
+
+.botonForm {
+    background-color: black;
+    color: white;
+    border: none;
+    width: 150px;
+    padding: 10px 20px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50px;
+}
+
+
+
+/*FOOTER*/
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+.nameFooter a img {
+    width: 120px;
+    height: auto;
+}
+
+.hrFooter {
+    width: 100%;
+    opacity: 100%;
+}
+
+.navMenuFooter {
+    display: flex;
+    justify-content: center;
+
+}
+
+.navMenuFooter ul li a {
+    color: white;
+}
+
+.FooterFin {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.aFooter:hover {
+    color: #BBB9AF
+}
+
+.iconsFooter {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    height: 40px;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.iconsFooter a {
+    color: white;
+}
+
+
+
+
+
+/* Responsive */
+
+
+@media (max-width: 1020px) {
+
+    /*Menu de navegación */
+
+    .icons {
+        display: none;
+    }
+
+    .nav {
+        display: none;
+    }
+
+
+    /*HERO*/
+
+    .hero .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 60%;
+    }
+
+    .hero h1 {
+        width: 50%;
+        font-size: 35px;
+        margin: 40px 0 0 40px;
+    }
+
+
+    .hero button {
+        margin-left: 40px;
+    }
+
+    /*Galería */
+
+
+    .galeriaText p {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .card.col-4 {
+        flex: 0 0 80%;
+        max-width: 70%;
+        margin: auto;
+    }
+
+    .card-img-top {
+        aspect-ratio: 4 / 3;
+        height: auto;
+    }
+
+    /*ABOUT RESPONSIVE */
+
+    .aboutItems {
+        gap: 1px;
+    }
+
+    .aboutText {
+        width: 320px;
+        font-size: 15px;
+        text-align: center;
+
+    }
+
+    /*FOOTER*/
+
+    .nameFooter a img {
+        width: 120px;
+        height: auto;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    /*HERO*/
+
+    .hero .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 45%;
+    }
+
+    .hero h1 {
+        width: 50%;
+        font-size: 30px;
+        margin: 40px 0 0 40px;
+    }
+
+
+    .hero button {
+        margin-left: 40px;
+    }
+
+}
