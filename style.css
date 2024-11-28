@@ -23,7 +23,7 @@
 
 .icons {
     display: flex;
-    justify-content: end;
+    justify-content: center;
     gap: 20px;
 }
 
@@ -37,28 +37,47 @@
     color: black;
 }
 
+/*JS para aumentar el tamaño de la letra - ICONOS*/
+
+.tamañoLetra {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.tamañoLetra button {
+    font-size: 15px;
+    margin: 5px 0 5px;
+}
 
 
-/*HERO*/
+/* HERO */
 
 .hero {
-    background-image: url(./Images/fondoHero.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    position: relative;
     height: 600px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
     margin-top: 20px;
 }
 
+.hero .container {
+    margin-right: 20px;
+}
 
 .hero h1 {
     color: white;
     width: 25%;
-    line-height: 1.2;
     font-size: 40px;
+    position: relative;
+    z-index: 2;
+    top: 20px;
 }
 
 .hero button {
@@ -69,7 +88,65 @@
     background-color: black;
     color: white;
     margin-top: 15px;
+    position: relative;
+    z-index: 2;
 }
+
+.hero button:hover {
+    background-color: #333;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+
+/* ESTILO PARA EL CARRUSEL --- JS */
+.carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%;
+}
+
+.slides img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    flex-shrink: 0;
+}
+
+.carousel .siguiente,
+.carousel .anterior {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.carousel .anterior {
+    left: 10px;
+}
+
+.carousel .siguiente {
+    right: 10px;
+}
+
 
 
 /*ABOUT*/
@@ -98,6 +175,23 @@
     cursor: pointer;
     padding: 5px 10px;
     color: blue;
+}
+
+
+/* Estilos para el LEER MAS / LEER MENOS DE LA PAGINA  --- MODIFICACIONES JS*/
+.hide {
+    display: none;
+}
+
+.mostrar {
+    display: inline;
+}
+
+.toggleLink {
+    display: inline;
+    cursor: pointer;
+    font-size: 12px;
+    margin-left: 5px;
 }
 
 
@@ -156,7 +250,7 @@
 
 .questionForm p {
     line-height: 40px;
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -191,7 +285,6 @@
     margin: 0 auto;
     border-radius: 50px;
 }
-
 
 
 /*FOOTER*/
@@ -247,9 +340,6 @@ footer {
 }
 
 
-
-
-
 /* Responsive */
 
 
@@ -257,7 +347,8 @@ footer {
 
     /*Menu de navegación */
 
-    .icons {
+    .icons,
+    .tamañoLetra {
         display: none;
     }
 
@@ -283,7 +374,7 @@ footer {
 
 
     .hero button {
-        margin-left: 40px;
+        margin-left: 40px;  
     }
 
     /*Galería */
@@ -328,6 +419,30 @@ footer {
 }
 
 
+
+
+@media (max-width: 992px) {
+
+    /*Formulario */
+
+    .navMenu {
+        position: absolute;
+        left: 0px;
+        top: 55px;
+        transition: all .5s ease;
+        background-color: white;
+        width: 100%;
+    }
+
+
+    .nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+}
+
+
 @media (max-width: 768px) {
 
     /*HERO*/
@@ -337,17 +452,27 @@ footer {
         flex-direction: column;
         justify-content: space-around;
         height: 45%;
+        align-items: center;
     }
 
     .hero h1 {
         width: 50%;
         font-size: 30px;
         margin: 40px 0 0 40px;
+        text-align: center;
     }
 
 
     .hero button {
         margin-left: 40px;
+        border-radius: 2px;
+    }
+
+    /*Formulario */
+
+    .botonForm {
+        border-radius: 2px;
+
     }
 
 }

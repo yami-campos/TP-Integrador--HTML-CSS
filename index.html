@@ -70,14 +70,30 @@
                 <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
 
+            <!--Aumentar o disminuir tamaño de letra con JS -->
+            <div class="tamañoLetra text-center">
+                <button id="aumentarLetra" class="btn"><i class="fa-solid fa-font"></i></button>
+                <button id="disminuirLetra" class="btn"><i class="fa-solid fa-font"></i></button>
+            </div>
         </nav>
 
-        <!--HERO-->
-
+        <!-- HERO -->
         <div class="hero">
             <div class="container">
                 <h1>A pottery studio dedicated to creativity and community.</h1>
                 <button>TAKE A CLASS</button>
+            </div>
+
+            <div class="carousel">
+                <div class="slides">
+                    <img src="./Images/fondoHero.jpg" alt="Slide 1">
+                    <img src="./Images/galeria1.jpg" alt="Slide 2">
+                    <img src="./Images/galeria2.jpg" alt="Slide 3">
+                </div>
+
+                <!-- Botones para controlar el slide -->
+                <button class="anterior">❮</button>
+                <button class="siguiente">❯</button>
             </div>
         </div>
 
@@ -93,17 +109,17 @@
 
                 <div class="aboutText">
                     <p>Sarah Glass Ceramics is a woman-owned pottery studio located in Fort Lauderdale. Our mission is
-                        to
-                        provide everyone of all skill levels a strong foundation and supportive environment to
-                        experience
-                        the
-                        relaxing art of pottery making. We are happy to provide studio space and equipment to let you
-                        channel
-                        your inner artist.</p>
+                        to provide everyone of all skill levels a strong foundation and supportive environment to
+                        experience the
+                        <span class="hide" id="oculto">relaxing art of pottery making. We are happy to provide studio
+                            space and equipment to let you channel your inner artist.</span>
+                        <span id="toggleLink" class="toggleLink">... more</span>
+                    </p>
+
                 </div>
 
                 <!--Botón del about-->
-                <div class="aboutButton">
+                <div class="aboutButton" id="hideText_btn">
                     <button>LEARN MORE</button>
                 </div>
             </div>
@@ -296,6 +312,7 @@
         </section>
 
     </footer>
+    <script src="app.js"></script>
 </body>
 
 </html>
